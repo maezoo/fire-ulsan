@@ -1,23 +1,68 @@
 @import "./reset.scss";
 
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.cdnfonts.com/css/arial-2');
+
+.arial {
+  font-family: 'Arial', sans-serif;
+}
+
+
+// body {
+//   letter-spacing: -1px;
+// }
+
+// select {
+//   font-family: 'NanumSquareRound', sans-serif;
+// }
+
+// .visual {
+//   font-family: 'NanumSquareRound', sans-serif;
+// }
+
+
+
+$white: #FFF;
+$gray: #808180;
+$lightblack: #343434;
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
+  font-family: 'NanumSquareRound', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .wrapper {
-  width: 100%;
-  background-color: aqua;
+  width: 1280px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 
   header {
-    width: 1280px;
     background-color: greenyellow;
 
     .header_lang {
@@ -47,7 +92,91 @@ body {
   }
 
   footer {
-    background-color: rgb(195, 151, 195);
 
+    .footer_top {
+      background-color: #373737;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .terms {
+        font-size: 15px;
+
+        // gap: 5px;
+
+        li {
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      .count_sns {
+        color: $white;
+        font-size: 16px;
+
+        span {
+          font-size: 24px;
+          color: #fdaf39;
+        }
+
+      }
+
+    }
+
+    .footer_bottom {
+      height: 125px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+
+      .footer_logo {
+        img {
+          width: 194px;
+          height: 44px;
+        }
+      }
+
+      .add_copy {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        padding-right: 220px;
+        gap: 5px;
+        letter-spacing: -1px;
+        color: $lightblack;
+
+        .copy {
+
+          span {
+            color: $gray;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .select {
+        #select_box {
+          font-size: 12px;
+          width: 210px;
+          height: 30px;
+          color: $gray;
+          border: .5px solid $gray;
+          padding-left: 20px;
+          appearance: none;
+          background: url(../images/ft-arrow.png)no-repeat;
+          background-position: 92% 50%;
+        }
+      }
+
+
+    }
   }
 }
