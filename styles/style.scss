@@ -14,9 +14,7 @@
 }
 
 
-// body {
-//   letter-spacing: -1px;
-// }
+
 
 // select {
 //   font-family: 'NanumSquareRound', sans-serif;
@@ -31,6 +29,8 @@
 $white: #FFF;
 $gray: #808180;
 $lightblack: #343434;
+$blue: #2c98e8;
+$sky: #a3d4f9;
 
 * {
   box-sizing: border-box;
@@ -50,42 +50,97 @@ a {
 }
 
 body {
-
   font-family: 'NanumSquareRound', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .wrapper {
-  width: 1280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 1280px;
 
   header {
-    background-color: greenyellow;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .header_lang {
-      background-color: tomato;
       display: flex;
       justify-content: end;
+      gap: 13px;
     }
 
-    .header_bottom {
+    .header_menu {
       display: flex;
       justify-content: space-between;
-
     }
-
-    .logo {}
 
     .gnb {
-
-      background-color: yellow;
+      font-size: 26px;
+      font-weight: 700;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      padding-right: 13px;
+
+      .gnb-li {
+        position: relative;
+        width: 148px;
+        height: 82px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        >a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          line-height: 82px;
+        }
+
+        .lnb {
+          display: none;
+          position: absolute;
+          top: 82px;
+          font-size: 16px;
+          // display: flex; // none 지울 때 flex 살리기
+          align-items: center;
+          flex-direction: column;
+          background-color: $blue;
+          color: $sky;
+          width: 100%;
+
+          li {
+            padding: 10px 0;
+            width: 100%;
+
+            a {
+              display: block;
+            }
+          }
+
+          li:last-child {
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+
+      .gnb-li:hover {
+        background: $blue url(../images/border_line.png) no-repeat;
+        background-position: 50% 100%;
+
+
+      }
+
+
+      .hamburger {
+        padding-left: 70px;
+      }
     }
   }
 
