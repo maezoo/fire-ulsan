@@ -1,3 +1,9 @@
+$white: #FFF;
+$gray: #808180;
+$lightblack: #343434;
+$blue: #2c98e8;
+$sky: #a3d4f9;
+
 @import "./reset.scss";
 
 @font-face {
@@ -24,11 +30,7 @@
 
 
 
-$white: #FFF;
-$gray: #808180;
-$lightblack: #343434;
-$blue: #2c98e8;
-$sky: #a3d4f9;
+
 
 * {
   box-sizing: border-box;
@@ -84,7 +86,6 @@ body {
         height: 100%;
       }
     }
-
 
     .gnb {
       font-size: 26px;
@@ -148,11 +149,13 @@ body {
   }
 
   main {
-
-    .visula_1 {}
+    .visula_safer {}
 
     .visual_news {
-      .text {
+      background-color: red;
+      // height: 350px;
+
+      .title_text {
         h2 {
           font-size: 45px;
           font-weight: 700;
@@ -166,112 +169,150 @@ body {
         p {
           font-size: 22px;
         }
+      }
 
+      .room_box {
+        display: flex;
+        gap: 13px;
+
+        .box {
+          background-color: $white;
+          width: 432px;
+          border-radius: 25px;
+          padding: 35px;
+
+          .top_text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+
+            img {
+              width: 21px;
+              height: 21px;
+            }
+          }
+        }
+
+        .full_box {
+          height: 350px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+
+          li {
+            height: 169px;
+
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+footer {
+  .footer_top {
+    background-color: #373737;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    .terms {
+      font-size: 15px;
+
+      li:nth-child(1),
+      :nth-child(2) {
+        border-right: 1px solid $gray;
+      }
+
+      li {
+        padding: 0 20px;
+        color: $white;
+      }
+    }
+
+    .count_sns {
+      display: flex;
+      color: $white;
+      font-size: 16px;
+      gap: 30px;
+
+      .count {
+
+        gap: 3px;
+
+        li:nth-child(1) {
+          padding-right: 10px;
+
+        }
+
+        :nth-child(2) {
+          letter-spacing: -1px;
+        }
+
+        span {
+          font-size: 24px;
+          font-weight: bold;
+          color: #fdaf39;
+        }
+      }
+
+      .sns {
+        gap: 10px;
       }
     }
   }
 
-  footer {
-    .footer_top {
-      background-color: #373737;
-      height: 100px;
+  .footer_bottom {
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+
+    .footer_logo {
+      img {
+        width: 194px;
+        height: 44px;
+      }
+    }
+
+    .add_copy {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      font-size: 14px;
+      padding-right: 220px;
+      gap: 5px;
+      letter-spacing: -1px;
+      color: $lightblack;
 
-      ul {
-        display: flex;
-        align-items: center;
-      }
-
-      .terms {
-        font-size: 15px;
-
-        li:nth-child(1),
-        :nth-child(2) {
-          border-right: 1px solid $gray;
-        }
-
-        li {
-          padding: 0 20px;
-          color: $white;
-        }
-      }
-
-      .count_sns {
-        display: flex;
-        color: $white;
-        font-size: 16px;
-        gap: 30px;
-
-        .count {
-
-          gap: 3px;
-
-          li:nth-child(1) {
-            padding-right: 10px;
-
-          }
-
-          :nth-child(2) {
-            letter-spacing: -1px;
-          }
-
-          span {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fdaf39;
-          }
-        }
-
-        .sns {
-          gap: 10px;
+      .copy {
+        span {
+          color: $gray;
+          font-size: 13px;
         }
       }
     }
 
-    .footer_bottom {
-      height: 125px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 20px;
-
-      .footer_logo {
-        img {
-          width: 194px;
-          height: 44px;
-        }
-      }
-
-      .add_copy {
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-        padding-right: 220px;
-        gap: 5px;
-        letter-spacing: -1px;
-        color: $lightblack;
-
-        .copy {
-          span {
-            color: $gray;
-            font-size: 13px;
-          }
-        }
-      }
-
-      .select {
-        #select_box {
-          font-size: 12px;
-          width: 210px;
-          height: 30px;
-          color: $gray;
-          border: .5px solid $gray;
-          padding-left: 20px;
-          appearance: none;
-          background: url(../images/ft-arrow.png)no-repeat;
-          background-position: 92% 50%;
-        }
+    .select {
+      #select_box {
+        font-size: 12px;
+        width: 210px;
+        height: 30px;
+        color: $gray;
+        border: .5px solid $gray;
+        padding-left: 20px;
+        appearance: none;
+        background: url(../images/ft-arrow.png)no-repeat;
+        background-position: 92% 50%;
       }
     }
   }
