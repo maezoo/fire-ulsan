@@ -54,98 +54,94 @@ body {
   align-items: center;
   background-color: sandybrown;
 
-  .pop_up_zone {
-    background-color: #ECEDEF;
+
+  // ======================================================================.
+
+
+  .swiper {
     width: 100%;
     height: 226px;
-    display: flex;
-    justify-content: center;
-    letter-spacing: -1px;
+    background: #ecedef;
 
-    .pop_wrapper {
-      position: relative;
+    .swiper-wrapper {
+      margin: 0 auto;
+      background-color: #2c98e8;
+      width: 1280px;
+      // overflow: hidden;
 
-      .today_stop_btn {
-        position: absolute;
-        z-index: 999;
-        top: 15px;
-        right: 17px;
-        color: #666;
-        font-size: 13px;
-        text-shadow: 1px 1px 1px #fff;
-        display: flex;
-        align-items: center;
-        gap: 4px;
+      .swiper-slide {
+        padding: 8px 0 0 0;
 
-        input {
-          margin: 0;
-        }
-
-        .popup_close {
-          // display: inline-block;
-          border: none;
-          background: #fff;
-          border-radius: 3px 3px;
-
-        }
-      }
-
-      .mySwiper {
-        width: 100%;
-        position: relative;
-
-        // height: 226px;
-        // height: 100%;
-
-        .swiper-wrapper {
+        img {
           width: 1280px;
-
-          .pop_up {
-            display: flex;
-            justify-content: center;
-
-            img {
-              border-radius: 14px;
-              width: 1260px;
-              height: 180px;
-            }
-          }
+          height: 180px;
+          border-radius: 14px;
         }
-
-
-
-        .btn-next {
-          background: url(../images/pop_up_arrow_right.png) no-repeat;
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          top: 50%;
-          z-index: 9999;
-        }
-
-        .btn-prev {
-          background: url(../images/pop_up_arrow_left.png) no-repeat;
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          top: 50%;
-          z-index: 9999;
-          left: 0px;
-        }
-
-        .swiper-pagination {
-          z-index: 9999;
-          // top: 50%;
-          width: 200px;
-          height: 200px;
-        }
-
-
       }
+    }
+
+    .today_stop_btn {
+      text-shadow: 1px 1px 1px #fff;
+      color: #666;
+      font-size: 13px;
+
+
+      position: absolute;
+      top: 15px;
+      right: 17px;
+      z-index: 99999;
+
+
+    }
+
+    .swiper-button-next {
+      background: url(../images/pop_up_arrow_right.png) no-repeat;
+      width: 30px;
+      height: 30px;
+    }
+
+    .swiper-button-prev {
+      background: url(../images/pop_up_arrow_left.png) no-repeat;
+      width: 30px;
+      height: 30px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      display: none;
+    }
+
+    .swiper-pagination {
+      // position: absolute;
+      // text-align: center;
+      // transform: translate3d(0, 0, 0);
+      // transition: .3s opacity;
+      // z-index: 10;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: $white;
+      // border: 1px solid rgba(0, 0, 0, 0.1);
+      // position: absolute;
+      // z-index: 999;
+      // bottom: 0px;
+
+      // // padding: 0;
+      // border-radius: 50%;
+      // -webkit-border-radius: 50%;
+      // text-indent: -9999px;
+      // cursor: pointer;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #f0551c;
     }
   }
 
   // ======================================================================
+
   .wrapper {
     display: flex;
     flex-direction: column;
