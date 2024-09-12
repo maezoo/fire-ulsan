@@ -9,8 +9,17 @@ var swiper = new Swiper(".mySwiper", {
     },
     mousewheel: true,
     keyboard: true,
-    autoplay:{delay:10000,}
+    autoplay:{delay:9000,},
+    loop:true,
     // slidesPerView: 1,
   });
   
-  
+
+  var swiper = new Swiper(".mySwiper_2", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable:true,
+    },
+    autoplay:{delay:6000,},
+
+  });
