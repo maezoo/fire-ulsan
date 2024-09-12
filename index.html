@@ -13,60 +13,58 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/slider.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
 
+  <div class="top_pop_up hidden">
+    <div class="swiper mySwiper">
 
-  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/pop_up1.jpeg" alt="pop_up_1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/pop_up2.jpeg" alt="pop_up_2">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/pop_up3.png" alt="pop_up_3">
 
-
-
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/pop_up1.jpeg" alt="pop_up_1">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/pop_up4.jpeg" alt="pop_up_4">
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="images/pop_up2.jpeg" alt="pop_up_2">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/pop_up3.png" alt="pop_up_3">
 
+      <div class="today_stop_btn">
+        <input type="checkbox" id="pop_up_top">
+        <label for="pop_up_top">오늘 하루 그만보기</label>
+        <button class="popup_close">닫기</button>
       </div>
-      <div class="swiper-slide">
-        <img src="images/pop_up4.jpeg" alt="pop_up_4">
-      </div>
+
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-pagination"></div>
     </div>
-
-    <div class="today_stop_btn">
-      <input type="checkbox" id="pop_up_top">
-      <label for="pop_up_top">오늘 하루 그만보기</label>
-      <button class="popup_close">닫기</button>
-    </div>
-
-
-
-    <div class="swiper-button-next"></div>
-
-    <div class="swiper-button-prev"></div>
-
-    <div class="swiper-pagination"></div>
   </div>
 
 
   <!-- ====================================================================== -->
   <div class="wrapper">
 
-    <div class="control_btn">
-      <!-- <button class="zone_op"> -->
-      <!-- </button> -->
-      <!-- <button class="zone_cl"> -->
-      <a href="#"><span>팝업존 열기</span></a>
-      <!-- <a href="#"><span>팝업존 닫기</span></a> -->
-      <!-- </button> -->
-    </div>
+    <button class="zone_cl" id="btn_cl" onclick="changeBtnName()">
+      <span>팝업존 닫기</span>
+    </button>
 
-    <header class="header">
+    <button class="zone_op">
+      <span>팝업존 열기</span>
+    </button>
+
+
+    <header class=" header">
       <div class="header_wrapper">
         <div class="header_lang">
           <div><a href="#"><img src="images/english.png" alt="eng"></a></div>
