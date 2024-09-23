@@ -172,7 +172,7 @@ body {
       .category_box {
         width: 206px;
         height: 519px;
-        background-color: rgba(255, 255, 255, 0.824);
+        background-color: rgba(255, 255, 255, 0.789);
         border: 1px solid #bdbdbd;
 
         .category_title {
@@ -186,25 +186,26 @@ body {
         }
 
         .sub_category {
-          padding: 28px;
+          padding: 20px;
           font-size: 15px;
           display: flex;
           flex-direction: column;
           gap: 15px;
 
           >li {
-            background: url(../images/ham_mini_circle.png) no-repeat 0% 50%;
+            background: url(../images/ham_mini_circle.png) no-repeat;
+            background-position: 0px 5px;
 
             span {
               padding-left: 10px;
             }
           }
 
-          li:nth-child(3) {
+          li:nth-child(-n+3) {
             ul {
               display: flex;
               flex-direction: column;
-              gap: 15px;
+              gap: 12px;
               padding: 15px 15px 0 15px;
 
               li {
@@ -213,8 +214,8 @@ body {
               }
             }
           }
-
         }
+
       }
     }
   }
