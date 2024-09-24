@@ -20,16 +20,6 @@ $orange: #fdaf39;
   font-family: 'Arial Bold';
 }
 
-
-// select {
-//   font-family: 'NanumSquareRound', sans-serif;
-// }
-
-// .visual {
-//   font-family: 'NanumSquareRound', sans-serif;
-// }
-
-
 * {
   box-sizing: border-box;
 }
@@ -54,9 +44,6 @@ body {
   align-items: center;
   background-color: sandybrown;
 
-  // =======================================================
-
-  // ==============.
   .top_pop_up {
     width: 100%;
     height: 226px;
@@ -73,7 +60,6 @@ body {
     .mySwiper {
       width: 95%;
       height: 226px;
-
 
       .swiper-wrapper {
         margin: 0 auto;
@@ -133,7 +119,6 @@ body {
       .swiper-pagination {
         position: absolute;
         bottom: 13px;
-
 
         .swiper-pagination-bullet {
           background: rgb(255, 255, 255);
@@ -870,4 +855,8 @@ body {
     }
 
   }
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
