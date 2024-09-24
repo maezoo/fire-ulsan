@@ -2,50 +2,28 @@ const ham_op = document.querySelector('.hamburger');
 const ham_cl = document.querySelector('.ham_close a');
 const ham_pop = document.querySelector('.hamburger_pop');
 
-ham_op.addEventListener('click', () => ham_pop.classList.add('show'));
-ham_cl.addEventListener('click', () => ham_pop.classList.add('hidden'));
-
-
-// function ham_Popup() {
-// ham_op.addEventListener('click',
-//     function () {
-//         ham_pop.classList.add('show');
-//     });
-// ham_cl.addEventListener('click', function () {
-//     ham_pop.classList.add('hidden');
-// });
-// }
-// ham_Popup();
-
+ham_op.addEventListener('click', () => ham_pop.classList.toggle('show'));
+ham_cl.addEventListener('click', () => ham_pop.classList.toggle('show'));
 
 // ========================================================================================================
 
-// const close_btn = document.querySelector('.zone_cl');
-// const pop = document.querySelector('.top_pop_up');
-// const btnElement = document.getElementById('btn_cl');
-
-// function initPopup() {
-//     닫기 버튼 클릭 시
-//     close_btn.addEventListener('click', function changeBtnName() {
-//         btnElement.innerText = '팝업존 닫기'; // 버튼 텍스트 변경
-//         pop.classList.add('hidden'); // 팝업 숨기기
-//         pop.classList.add('show'); // 팝업 숨기기
-//     });
-
-// }
-// initPopup();
-
-const close_btn = document.querySelector('.zone_cl');
-const pop = document.querySelector('.top_pop_up');
-const btnElement = document.getElementById('btn_cl');
+const pop_btn = document.querySelector('.top_zone_btn');  // 버튼
+const pop = document.querySelector('.top_pop_up');     // 팝업 요소
+const btnElement = document.getElementById('btn_cl');  // 열기 버튼
 
 function top_Popup() {
-    close_btn.addEventListener('click', function () {
-        pop.classList.add('show');
+    // 팝업 열기 버튼 클릭 시 팝업을 열거나 닫음
+    pop_btn.addEventListener('click', function () {
+        pop.classList.toggle('show');
     });
 }
+
 top_Popup();
 
+// // 팝업 닫기 버튼 클릭 시 팝업을 닫음
+// open_btn.addEventListener('click', function () {
+//     pop.classList.remove('show');
+// });
 
 
 //     document.getElementById('pop_up_top').style.display = "none";
