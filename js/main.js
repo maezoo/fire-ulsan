@@ -67,3 +67,13 @@ function initMenu() {
 initMenu();
 
 // ========================================================================================================
+let index = 0;
+const safer_slide = document.querySelectorAll('.slide');
+
+function showNextImage() {
+    safer_slide[index].classList.remove('show');
+    index = (index + 1) % safer_slide.length;
+    safer_slide[index].classList.add('show');
+}
+
+setInterval(showNextImage, 3000);  // 3초마다 전환
