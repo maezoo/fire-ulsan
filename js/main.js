@@ -117,3 +117,31 @@ function shrink_animation() {
 }
 
 
+// ==============================
+
+document.addEventListener('DOMContentLoaded', function () {
+    const quick_icon = document.querySelector('.scroll_icon'); // 단일 요소 선택
+    const threshold = window.innerHeight / 2;
+
+    window.addEventListener('scroll', function () {
+        const pageScroll = window.scrollY;
+
+        if (pageScroll > threshold) {
+            quick_icon.style.opacity = '1';
+        } else {
+            quick_icon.style.opacity = '0';
+        }
+    });
+
+
+    // if (window.scrollY > threshold) {
+    //     quick_icon.style.opacity = '1';
+    // } else {
+    //     quick_icon.style.opacity = '0';
+    // }
+
+    // 둘 중에  뭐가 나은지 고르기
+
+    // const initialScroll = window.scrollY;
+    // quickIcon.style.opacity = initialScroll > threshold ? '1' : '0';
+});

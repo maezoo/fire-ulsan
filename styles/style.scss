@@ -55,7 +55,7 @@ body {
   @extend.fl_col;
   align-items: center;
   font-family: 'NanumSquareRound', sans-serif;
-  background-color: sandybrown;
+  background-color: rgb(85, 74, 187);
   overflow-x: hidden;
 }
 
@@ -272,6 +272,62 @@ body.no-scroll {
   visibility: hidden;
 }
 
+// ==================================================
+
+.scroll_icon {
+  @extend.fl_col;
+  gap: 20px;
+  position: fixed;
+  z-index: 9999999;
+  left: 95%;
+  opacity: 0;
+  transition: opacity .3s ease;
+
+
+  top: 80%;
+  transform: translateY(-50%);
+  /* 중앙 정렬을 위한 변환 */
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      p {
+        font-size: 14px;
+        color: #f26522;
+        opacity: 0;
+      }
+    }
+  }
+
+  li:hover {
+    img {
+      opacity: 0;
+    }
+
+    p {
+      opacity: 1;
+    }
+  }
+
+  li:nth-child(1):hover {
+    background: url(../images/quick_01_hover.png) no-repeat;
+  }
+
+  li:nth-child(2):hover {
+    background: url(../images/quick_02_hover.png) no-repeat;
+  }
+
+  li:nth-child(3):hover {
+    background: url(../images/quick_03_hover.png) no-repeat;
+  }
+
+  li:nth-child(4):hover {
+    background: url(../images/quick_04_hover.png) no-repeat;
+  }
+}
 
 .top_zone_btn {
   width: 86px;
@@ -588,8 +644,6 @@ main {
   .visual_news {
     background: url(../images/newsbackground.png) no-repeat left -60px;
     height: 700px;
-    // width: 1280px;
-    // align-items: center;
 
     .news_inner {
       @extend.fl_col;
@@ -771,7 +825,6 @@ main {
     }
   }
 }
-
 
 .mySwiper_2 {
   width: 100%;
