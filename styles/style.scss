@@ -401,7 +401,7 @@ main {
 
   .visual_safer {
     .safer_inner {
-      // margin: 50px 0 85px 50px;
+      position: relative;
       width: 1473px;
       margin: 70px auto;
       padding-left: 45px;
@@ -410,7 +410,7 @@ main {
         width: 1280px;
         position: absolute;
         margin: 30px 0 0 40px;
-        z-index: 99999;
+        z-index: 9999;
 
         p:nth-child(1) {
           line-height: 1.5;
@@ -430,6 +430,40 @@ main {
         }
       }
 
+      .slide_btn {
+        position: absolute;
+        z-index: 9999;
+        margin: 280px 0 0 50px;
+
+        .btn_item {
+          width: 40px;
+          height: 6px;
+          margin: 20px;
+          // text-indent: -100000px;
+          background: #d9d9d9;
+          border-radius: 10px;
+        }
+
+        .btn_item.animate {
+          animation: li-shrink 0.2s ease-in-out;
+          // background: #ED5540;
+        }
+
+        @keyframes li-shrink {
+          0% {
+            width: 50px;
+          }
+
+          50% {
+            width: 100px;
+          }
+
+          100% {
+            width: 50px;
+          }
+        }
+      }
+
       .slide_container {
         height: 630px;
 
@@ -438,6 +472,10 @@ main {
           align-items: center;
           justify-content: center;
           position: absolute;
+
+          // backdrop-filter: blur(10px);
+          // opacity: 0;
+          // transition: opacity 0.5s ease-in-out;
 
           .mid_box {
             width: 530px;
@@ -502,6 +540,10 @@ main {
           }
         }
 
+        .slid.show {
+          opacity: 1;
+        }
+
         .red {
           background: url(../images/safer_red.png) no-repeat;
           background-size: contain;
@@ -538,6 +580,8 @@ main {
           @extend.safer_bg;
         }
       }
+
+
     }
   }
 
