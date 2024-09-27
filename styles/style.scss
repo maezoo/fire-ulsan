@@ -167,19 +167,14 @@ body.no-scroll {
   background-color: rgba(59, 59, 59, 0.898);
   width: 100vw;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 
   .hamburger_inner {
     width: 1167px;
     height: 641px;
     font-weight: 900;
-
-
 
     .header_title {
       height: 58px;
@@ -256,11 +251,30 @@ body.no-scroll {
 
       .category_box:hover {
         color: $white;
-        background: $blue;
-        // background: url(../images/ham_yellow_bull.png) no-repeat;
-        // background-position: 0px 5px;
+        background: $blue url(../images/ham_border_line01.png) no-repeat 50% 60px;
+
+        .category_title {
+          color: #FFD700;
+        }
+
+        .sub_category {
+          >li {
+            background: url(../images/ham_white_bull.png) no-repeat;
+            background-position: 0px 5px;
+          }
+
+          li:nth-child(-n+3) {
+            ul {
+              li {
+                color: $white
+              }
+            }
+          }
+        }
       }
     }
+
+
   }
 }
 
@@ -271,8 +285,6 @@ body.no-scroll {
 .hamburger_pop.hidden {
   visibility: hidden;
 }
-
-// ==================================================
 
 .scroll_icon {
   @extend.fl_col;
@@ -289,7 +301,10 @@ body.no-scroll {
   /* 중앙 정렬을 위한 변환 */
 
   li {
+    width: 130px;
+
     a {
+
       display: flex;
       align-items: center;
       gap: 10px;
@@ -350,7 +365,6 @@ body.no-scroll {
 }
 
 .top_zone_btn:hover {
-
   background: #333;
 }
 
@@ -862,8 +876,6 @@ footer {
     display: flex;
     justify-content: space-around;
 
-
-
     .top_wrap {
       width: 1280px;
       display: flex;
@@ -899,7 +911,6 @@ footer {
         gap: 30px;
 
         .count {
-
           gap: 3px;
 
           li:nth-child(1) {
@@ -912,6 +923,7 @@ footer {
           }
 
           span {
+            padding-left: 3px;
             font-size: 24px;
             font-weight: bold;
             color: #fdaf39;

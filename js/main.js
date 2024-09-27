@@ -1,5 +1,22 @@
+// 로컬 스토리지에서 'visitCount' 값을 가져옴
+let visitCount = localStorage.getItem('visitCount');
 
+// 방문 횟수가 없을 경우 초기화
+if (visitCount === null) {
+    visitCount = 0;
+} else {
+    visitCount = parseInt(visitCount);
+}
 
+// 방문 횟수 증가
+visitCount++;
+
+// 증가한 방문 횟수를 다시 로컬 스토리지에 저장
+localStorage.setItem('visitCount', visitCount);
+
+// 방문 횟수를 페이지에 표시
+document.getElementById('visitCount').textContent = visitCount;
+// ========================================================================================================
 
 
 let index = 0;
