@@ -19,29 +19,23 @@ document.getElementById('visitCount').textContent = visitCount;
 // ========================================================================================================
 
 
-let index = 0;
-const bg_image = ['red', 'blue_1', 'blue_2', 'orange', 'yellow_1', 'yellow_2'];
-const safer_slide = document.querySelectorAll('.slide');
+// let index = 0;
+// const bg_image = ['red', 'blue_1', 'blue_2', 'orange', 'yellow_1', 'yellow_2'];
+// const safer_slide = document.querySelectorAll('.slide');
+
 
 // function showNextImage() {
-//     safer_slide.classList.remove(bg_image[index]);
+//     safer_slide.forEach(slide => {
+//         slide.classList.remove(bg_image[index]);
+//     });
 //     index = (index + 1) % bg_image.length;
-//     safer_slide.classList.add(bg_image[index]);
-//     safer_slide.classList.add('show');
+//     safer_slide.forEach(slide => {
+//         slide.classList.add(bg_image[index]);
+//         slide.classList.add('show');
+//     });
 // }
 
-function showNextImage() {
-    safer_slide.forEach(slide => {
-        slide.classList.remove(bg_image[index]);
-    });
-    index = (index + 1) % bg_image.length;
-    safer_slide.forEach(slide => {
-        slide.classList.add(bg_image[index]);
-        slide.classList.add('show');
-    });
-}
-
-setInterval(showNextImage, 3000);  // 3초마다 전환
+// setInterval(showNextImage, 3000);  // 3초마다 전환
 
 // ========================================================================================================
 
@@ -56,21 +50,28 @@ setInterval(showNextImage, 3000);  // 3초마다 전환
 // }
 
 
-const triggerButtons = document.querySelectorAll('.btn_item');
+// const triggerButtons = document.querySelectorAll('.shrink_ani');
 
-triggerButtons.forEach(btn_item => {
-    btn_item.addEventListener('click', shrink_animation);
-});
+// triggerButtons.forEach(shrink_ani => {
+//     shrink_ani.addEventListener('click', shrink_animation);
+// });
 
-function shrink_animation() {
-    triggerButtons.forEach(btn_item => {
-        btn_item.classList.remove('animate');
-        void btn_item.offsetWidth;
-        btn_item.classList.add('animate');
-    });
-}
+// function shrink_animation() {
+//     triggerButtons.forEach(shrink_ani => {
+//         shrink_ani.classList.remove('animate');
+//         void shrink_ani.offsetWidth;
+//         shrink_ani.classList.add('animate');
+//     });
+// }
 
+// function shrink_animation(event) {
+//     const clickedButton = event.currentTarget;
 
+//     // 클릭된 버튼에만 애니메이션을 리셋하고 다시 시작
+//     clickedButton.classList.remove('animate');
+//     void clickedButton.offsetWidth; // 리플로우 트리거
+//     clickedButton.classList.add('animate');
+// }
 
 
 

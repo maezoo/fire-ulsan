@@ -14,6 +14,7 @@ var swiper = new Swiper(".mySwiper", {
   // slidesPerView: 1,
 });
 
+// =====================================
 
 var swiper = new Swiper(".mySwiper_2", {
   pagination: {
@@ -26,3 +27,17 @@ var swiper = new Swiper(".mySwiper_2", {
 
 // =====================================
 
+var swiper = new Swiper(".mySwiper_3", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+  loop: true,
+  autoplay: { delay: 2000, },
+});
