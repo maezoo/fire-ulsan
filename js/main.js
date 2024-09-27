@@ -1,69 +1,6 @@
-const pop_btn = document.querySelector('.top_zone_btn');
-const pop = document.querySelector('.top_pop_up');
-const btnElement = document.getElementById('btn_cl');
 
-function top_Popup() {
-    pop_btn.addEventListener('click', function () {
-        pop.classList.toggle('show');
-    });
-}
 
-top_Popup();
 
-// ========================================================================================================
-const ham_op = document.querySelector('.hamburger');
-const ham_cl = document.querySelector('.ham_close a');
-const ham_pop = document.querySelector('.hamburger_pop');
-const body = document.body;
-
-// 팝업 열기 이벤트
-ham_op.addEventListener('click', () => {
-    ham_pop.classList.toggle('show');
-
-    // 팝업이 열리면 no-scroll 클래스를 추가하여 스크롤을 비활성화
-    if (ham_pop.classList.contains('show')) {
-        body.classList.add('no-scroll');
-    } else {
-        body.classList.remove('no-scroll');
-    }
-});
-
-// 팝업 닫기 이벤트
-ham_cl.addEventListener('click', () => {
-    ham_pop.classList.toggle('show');
-
-    // 팝업이 닫히면 no-scroll 클래스를 제거하여 스크롤을 활성화
-    if (!ham_pop.classList.contains('show')) {
-        body.classList.remove('no-scroll');
-    } else {
-        body.classList.add('no-scroll');
-    }
-});
-
-// ========================================================================================================
-const menu_gnb = document.querySelector('.gnb_li');
-const menu_lnb = document.querySelectorAll('.lnb li');
-const menu_gnb_items = document.querySelectorAll('.gnb_li'); // 모든 gnb_li를 선택
-
-function initMenu() {
-    menu_gnb_items.forEach(function (menu_gnb) { // 각 gnb_li에 대해
-        menu_gnb.addEventListener('mouseover', function () {
-            const menu_lnb = this.querySelector('.lnb');
-            if (menu_lnb) {
-                menu_lnb.classList.add('show');
-            }
-        });
-
-        menu_gnb.addEventListener('mouseout', function () {
-            const menu_lnb = this.querySelector('.lnb');
-            if (menu_lnb) {
-                menu_lnb.classList.remove('show');
-            }
-        });
-    });
-}
-initMenu();
-// ========================================================================================================
 
 let index = 0;
 const bg_image = ['red', 'blue_1', 'blue_2', 'orange', 'yellow_1', 'yellow_2'];
@@ -117,31 +54,121 @@ function shrink_animation() {
 }
 
 
-// ==============================
+
+
+
+
+
+
+
+
+
+
+
+// ===========================
+//상단 히든 팝업 =========
+
+const pop_btn = document.querySelector('.top_zone_btn');
+const pop = document.querySelector('.top_pop_up');
+const btnElement = document.getElementById('btn_cl');
+
+function top_Popup() {
+    pop_btn.addEventListener('click', function () {
+        pop.classList.toggle('show');
+    });
+}
+top_Popup();
+
+// ========================
+// 메뉴 ===========
+
+const menu_gnb = document.querySelector('.gnb_li');
+const menu_lnb = document.querySelectorAll('.lnb li');
+const menu_gnb_items = document.querySelectorAll('.gnb_li'); // 모든 gnb_li를 선택
+
+function initMenu() {
+    menu_gnb_items.forEach(function (menu_gnb) { // 각 gnb_li에 대해
+        menu_gnb.addEventListener('mouseover', function () {
+            const menu_lnb = this.querySelector('.lnb');
+            if (menu_lnb) {
+                menu_lnb.classList.add('show');
+            }
+        });
+
+        menu_gnb.addEventListener('mouseout', function () {
+            const menu_lnb = this.querySelector('.lnb');
+            if (menu_lnb) {
+                menu_lnb.classList.remove('show');
+            }
+        });
+    });
+}
+initMenu();
+
+// ==========================
+//  햄버거 팝업 ========
+
+
+const ham_op = document.querySelector('.hamburger');
+const ham_cl = document.querySelector('.ham_close a');
+const ham_pop = document.querySelector('.hamburger_pop');
+const body = document.body;
+
+ham_op.addEventListener('click', () => {
+    ham_pop.classList.toggle('show');
+
+    // 팝업이 열리면 no-scroll 클래스를 추가하여 스크롤을 비활성화
+    if (ham_pop.classList.contains('show')) {
+        body.classList.add('no-scroll');
+    } else {
+        body.classList.remove('no-scroll');
+    }
+});
+
+ham_cl.addEventListener('click', () => {
+    ham_pop.classList.toggle('show');
+
+    // 팝업이 닫히면 no-scroll 클래스를 제거하여 스크롤을 활성화
+    if (ham_pop.classList.contains('show')) {
+        body.classList.remove('no-scroll');
+    } else {
+        body.classList.add('no-scroll');
+    }
+});
+
+
+// ================================
+// 사이드 스크롤 아이콘 ===========
 
 document.addEventListener('DOMContentLoaded', function () {
-    const quick_icon = document.querySelector('.scroll_icon'); // 단일 요소 선택
-    const threshold = window.innerHeight / 2;
+    const quick_icon = document.querySelector('.scroll_icon');
+    const threshold = window.innerHeight / 2; // 기준점이 되는 요소
 
+    // 스크롤 이벤트 리스너
     window.addEventListener('scroll', function () {
         const pageScroll = window.scrollY;
-
-        if (pageScroll > threshold) {
-            quick_icon.style.opacity = '1';
-        } else {
-            quick_icon.style.opacity = '0';
-        }
+        quick_icon.style.opacity = pageScroll > threshold ? '1' : '0';
     });
 
-
-    // if (window.scrollY > threshold) {
-    //     quick_icon.style.opacity = '1';
-    // } else {
-    //     quick_icon.style.opacity = '0';
-    // }
-
-    // 둘 중에  뭐가 나은지 고르기
-
-    // const initialScroll = window.scrollY;
-    // quickIcon.style.opacity = initialScroll > threshold ? '1' : '0';
+    // 페이지 로드 시 초기 상태 설정
+    const pageScroll = window.scrollY;
+    quick_icon.style.opacity = pageScroll > threshold ? '1' : '0';
 });
+
+// threshold: 문지방, 한계점 = 요소가 보이기 시작할 스크롤 위치가 윈도우Y 보다 크면 보이게
+// if (pageScroll > threshold) {
+//     quick_icon.style.opacity = '1';
+// } else {
+//     quick_icon.style.opacity = '0';
+// }
+
+//반대
+// if (window.scrollY > threshold) {
+//     quick_icon.style.opacity = '1';
+// } else {
+//     quick_icon.style.opacity = '0';
+// }
+
+// ===============
+
+
