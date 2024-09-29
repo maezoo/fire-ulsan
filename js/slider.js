@@ -28,16 +28,25 @@ var swiper = new Swiper(".mySwiper_2", {
 // =====================================
 
 var swiper = new Swiper(".mySwiper_3", {
-  cssMode: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
-  mousewheel: true,
+  // mousewheel: true,
   keyboard: true,
+
   loop: true,
-  autoplay: { delay: 2000, },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
 });
+
