@@ -95,10 +95,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         const pageScroll = window.scrollY;
-        quick_icon.style.opacity = pageScroll > threshold ? '1' : '0';
+        if (pageScroll > threshold) {
+            quick_icon.classList.add('show');
+        } else {
+            quick_icon.classList.remove('show');
+        }
     });
 
     const pageScroll = window.scrollY;
-    quick_icon.style.opacity = pageScroll > threshold ? '1' : '0';
+    if (pageScroll > threshold) {
+        quick_icon.classList.add('show');
+    } else {
+        quick_icon.classList.remove('show');
+    }
 });
-

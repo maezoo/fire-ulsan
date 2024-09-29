@@ -209,9 +209,9 @@ body {
       position: fixed;
       z-index: 9999;
       opacity: 0;
-      transition: opacity .3s ease;
-      top: 80%;
-      transform: translateY(-50%);
+      transition: opacity .1s ease;
+      top: 40%;
+      // transform: translateY(-50%);
       left: 95%;
 
       li {
@@ -255,6 +255,32 @@ body {
 
       li:nth-child(4):hover {
         background: url(../images/quick_04_hover.png) no-repeat;
+      }
+    }
+
+    .scroll_icon.show {
+      animation: bounce-in 0.7s ease-out;
+      opacity: 1;
+    }
+
+    @keyframes bounce-in {
+
+      0% {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+      60% {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+
+      80% {
+        transform: translateY(5px);
+      }
+
+      100% {
+        transform: translateY(0);
       }
     }
 
