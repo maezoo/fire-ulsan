@@ -4,7 +4,7 @@ $lightblack: #343434;
 $blue: #2c98e8;
 $sky: #a3d4f9;
 $orange: #fdaf39;
-
+$yellow: #FFD700;
 
 @import "./reset.scss";
 
@@ -33,8 +33,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-
 
 // =================
 // extend ========== 
@@ -296,6 +294,17 @@ body {
       justify-content: center;
       align-items: center;
 
+
+
+
+
+
+
+
+
+
+
+
       .hamburger_inner {
         width: 1167px;
         height: 641px;
@@ -320,6 +329,13 @@ body {
           padding: 33px;
           letter-spacing: -1px;
 
+
+
+
+
+
+
+
           .category_box {
             width: 206px;
             height: 519px;
@@ -330,16 +346,19 @@ body {
               background-color: $blue;
               font-size: 18px;
               height: 60px;
-              color: $white;
               display: flex;
               align-items: center;
               justify-content: center;
+
+              h2 {
+                color: $white;
+              }
             }
 
             .sub_category {
               padding: 30px 25px;
               font-size: 15px;
-              @extend.fl_col;
+              @extend .fl_col;
               gap: 13px;
 
               >li {
@@ -348,56 +367,60 @@ body {
 
                 span {
                   padding-left: 10px;
+
+                  &:hover {
+                    color: $yellow;
+                  }
                 }
 
-                span:hover {
-                  color: #FFD700;
+                &:hover {
+                  background: url(../images/ham_white_bull.png) no-repeat;
+                  background-position: 0px 5px;
                 }
               }
 
               li:nth-child(-n+3) {
                 ul {
-                  @extend.fl_col;
+                  @extend .fl_col;
                   gap: 13px;
                   padding: 15px 15px 0 15px;
 
                   li {
                     font-size: 13px;
                     color: $gray;
-                  }
 
-                  li:hover {
-                    color: #FFD700;
+                    &:hover {
+                      color: #FFD700;
+                    }
                   }
+                }
+              }
+            }
+
+            &:hover {
+              color: $white;
+              background: $blue url(../images/ham_border_line01.png) no-repeat 50% 60px;
+
+              .category_title {
+                h2 {
+                  color: #FFD700;
+                }
+              }
+
+              .sub_category {
+                >li {
+                  background: url(../images/ham_white_bull.png) no-repeat;
+                  background-position: 0px 5px;
+                }
+
+                li:nth-child(-n+3) ul li {
+                  color: $white;
                 }
               }
             }
           }
 
-          .category_box:hover {
-            color: $white;
-            background: $blue url(../images/ham_border_line01.png) no-repeat 50% 60px;
 
-            .category_title {
-              color: #FFD700;
-            }
-
-            .sub_category {
-              >li {
-                background: url(../images/ham_white_bull.png) no-repeat;
-                background-position: 0px 5px;
-
-              }
-
-              li:nth-child(-n+3) {
-                ul {
-                  li {
-                    color: $white
-                  }
-                }
-              }
-            }
-          }
         }
       }
 
@@ -417,7 +440,6 @@ body {
         }
       }
     }
-
 
     .hamburger_pop.show {
       visibility: visible;
