@@ -1,23 +1,3 @@
-
-// ===========================
-// //햄버거 팝업 효과 =========
-
-const subCategoryItems = document.querySelectorAll('.category_box .sub_category > li');
-const spans = document.querySelectorAll('.category_box .sub_category > li span');
-
-spans.forEach(span => {
-    span.addEventListener('mouseenter', (event) => {
-        const parentLi = event.target.closest('li');
-        parentLi.style.backgroundImage = 'url(../images/ham_yellow_bull.png)'; // 변경할 배경 이미지
-    });
-
-    span.addEventListener('mouseleave', (event) => {
-        const parentLi = event.target.closest('li');
-        parentLi.style.backgroundImage = '';
-    });
-});
-
-
 // ===========================
 //상단 히든 팝업 =========
 const pop_btn = document.querySelector('.top_zone_btn');

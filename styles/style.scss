@@ -367,17 +367,26 @@ body {
 
                 span {
                   padding-left: 10px;
-
-                  &:hover {
-                    color: $yellow;
-                  }
-                }
-
-                &:hover {
-                  background: url(../images/ham_white_bull.png) no-repeat;
-                  background-position: 0px 5px;
                 }
               }
+
+              &:hover {
+                >li {
+                  background: url(../images/ham_white_bull.png) no-repeat;
+                  background-position: 0px 5px;
+
+                  &:hover {
+                    background: url(../images/ham_yellow_bull.png) no-repeat;
+                    background-position: 0px 5px;
+
+                    span {
+                      color: $yellow;
+                    }
+                  }
+                }
+              }
+
+
 
               li:nth-child(-n+3) {
                 ul {
@@ -388,7 +397,6 @@ body {
                   li {
                     font-size: 13px;
                     color: $gray;
-
 
                     &:hover {
                       color: $yellow !important;
