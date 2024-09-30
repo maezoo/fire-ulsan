@@ -389,13 +389,19 @@ body {
                     font-size: 13px;
                     color: $gray;
 
+
                     &:hover {
-                      color: #FFD700;
+                      color: $yellow !important;
                     }
                   }
+
+
                 }
               }
             }
+
+
+
 
             &:hover {
               color: $white;
@@ -419,6 +425,10 @@ body {
               }
             }
           }
+
+
+
+
 
 
         }

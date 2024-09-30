@@ -1,13 +1,14 @@
+
 // ===========================
 // //햄버거 팝업 효과 =========
 
+const subCategoryItems = document.querySelectorAll('.category_box .sub_category > li');
 const spans = document.querySelectorAll('.category_box .sub_category > li span');
-const nestedListItems = document.querySelectorAll('.category_box .sub_category li:nth-child(-n+3) ul li');
 
 spans.forEach(span => {
     span.addEventListener('mouseenter', (event) => {
         const parentLi = event.target.closest('li');
-        parentLi.style.backgroundImage = 'url(../images/ham_yellow_bull.png)';
+        parentLi.style.backgroundImage = 'url(../images/ham_yellow_bull.png)'; // 변경할 배경 이미지
     });
 
     span.addEventListener('mouseleave', (event) => {
@@ -16,17 +17,7 @@ spans.forEach(span => {
     });
 });
 
-nestedListItems.forEach(nestedItem => {
-    nestedItem.addEventListener('mouseenter', (event) => {
-        const parentLi = event.target.closest('li');
-        parentLi.style.backgroundImage = 'url(../images/ham_yellow_bull.png)';
-    });
 
-    nestedItem.addEventListener('mouseleave', (event) => {
-        const parentLi = event.target.closest('li');
-        parentLi.style.backgroundImage = '';
-    });
-});
 // ===========================
 //상단 히든 팝업 =========
 const pop_btn = document.querySelector('.top_zone_btn');
