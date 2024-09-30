@@ -85,17 +85,14 @@ ham_cl.addEventListener('click', () => {
 
 let visitCount = localStorage.getItem('visitCount');
 
-if (visitCount === null) {
+if (visitCount === NaN || visitCount === null) {
     visitCount = 0;
-} else {
-    visitCount = parseInt(visitCount);
 }
-
 visitCount++;
 
-localStorage.setItem('visitCount', visitCount);
 
 document.getElementById('visitCount').textContent = visitCount;
+localStorage.setItem('visitCount', visitCount);
 
 // ================================
 // 사이드 스크롤 아이콘 ===========
