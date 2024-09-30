@@ -212,7 +212,8 @@ body {
       transition: opacity .1s ease;
       top: 40%;
       // transform: translateY(-50%);
-      left: 95%;
+      left: 50%;
+      margin-left: 660px;
 
       li {
         width: 130px;
@@ -399,7 +400,24 @@ body {
           }
         }
       }
+
+      .zoom-in-effect {
+        animation: zoom-in 0.5s ease forwards;
+      }
+
+      @keyframes zoom-in {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     }
+
 
     .hamburger_pop.show {
       visibility: visible;

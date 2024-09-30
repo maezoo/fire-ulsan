@@ -58,15 +58,26 @@ const ham_op = document.querySelector('.hamburger');
 const ham_cl = document.querySelector('.ham_close a');
 const ham_pop = document.querySelector('.hamburger_pop');
 const body = document.body;
+const ham_inner = document.querySelector('.hamburger_inner');
+
 
 ham_op.addEventListener('click', () => {
     ham_pop.classList.toggle('show');
     body.classList.toggle('no-scroll');
+
+    // 팝업이 열릴 때 애니메이션 클래스 추가
+    if (ham_pop.classList.contains('show')) {
+        ham_inner.classList.add('zoom-in-effect');
+    }
 });
 
+// 햄버거 메뉴 닫기
 ham_cl.addEventListener('click', () => {
     ham_pop.classList.toggle('show');
     body.classList.toggle('no-scroll');
+
+    // 팝업이 닫힐 때 애니메이션 클래스 제거
+    ham_inner.classList.remove('zoom-in-effect');
 });
 
 // ================================
