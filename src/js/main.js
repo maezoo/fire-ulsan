@@ -1,3 +1,5 @@
+import '../styles/style.scss'
+
 // ===========================
 //상단 히든 팝업 =========
 const pop_btn = document.querySelector('.top_zone_btn');
