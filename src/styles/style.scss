@@ -6,7 +6,7 @@ $sky: #a3d4f9;
 $orange: #fdaf39;
 $yellow: #FFD700;
 
-@import "./reset.scss";
+@use "./reset.scss";
 
 @font-face {
   font-family: 'NanumSquareRound';
