@@ -60,7 +60,6 @@ a {
 }
 
 // ==================
-
 body {
   @extend.fl_col;
   align-items: center;
@@ -121,13 +120,13 @@ body {
       }
 
       .swiper-button-next {
-        background: url(/public/images/pop_up_arrow_right.png) no-repeat;
+        background: url(/images/pop_up_arrow_right.png) no-repeat;
         width: 30px;
         height: 30px;
       }
 
       .swiper-button-prev {
-        background: url(/public/images/pop_up_arrow_left.png) no-repeat;
+        background: url(/images/pop_up_arrow_left.png) no-repeat;
         width: 30px;
         height: 30px;
       }
@@ -241,19 +240,19 @@ body {
       }
 
       li:nth-child(1):hover {
-        background: url(/public/images/quick_01_hover.png) no-repeat;
+        background: url(/images/quick_01_hover.png) no-repeat;
       }
 
       li:nth-child(2):hover {
-        background: url(/public/images/quick_02_hover.png) no-repeat;
+        background: url(/images/quick_02_hover.png) no-repeat;
       }
 
       li:nth-child(3):hover {
-        background: url(/public/images/quick_03_hover.png) no-repeat;
+        background: url(/images/quick_03_hover.png) no-repeat;
       }
 
       li:nth-child(4):hover {
-        background: url(/public/images/quick_04_hover.png) no-repeat;
+        background: url(/images/quick_04_hover.png) no-repeat;
       }
     }
 
@@ -322,7 +321,7 @@ body {
         }
 
         .category_wrap {
-          background: url(/public/images/ham_bg.jpg) no-repeat 90%;
+          background: url(/images/ham_bg.jpg) no-repeat 90%;
           background-size: cover;
           display: flex;
           justify-content: space-between;
@@ -362,7 +361,7 @@ body {
               gap: 13px;
 
               >li {
-                background: url(/public/images/ham_mini_circle.png) no-repeat;
+                background: url(/images/ham_mini_circle.png) no-repeat;
                 background-position: 0px 5px;
 
                 span {
@@ -372,11 +371,11 @@ body {
 
               &:hover {
                 >li {
-                  background: url(/public/images/ham_white_bull.png) no-repeat;
+                  background: url(/images/ham_white_bull.png) no-repeat;
                   background-position: 0px 5px;
 
                   &:hover {
-                    background: url(/public/images/ham_yellow_bull.png) no-repeat;
+                    background: url(/images/ham_yellow_bull.png) no-repeat;
                     background-position: 0px 5px;
 
                     span {
@@ -413,7 +412,7 @@ body {
 
             &:hover {
               color: $white;
-              background: $blue url(/public/images/ham_border_line01.png) no-repeat 50% 60px;
+              background: $blue url(/images/ham_border_line01.png) no-repeat 50% 60px;
 
               .category_title {
                 h2 {
@@ -423,7 +422,7 @@ body {
 
               .sub_category {
                 >li {
-                  background: url(/public/images/ham_white_bull.png) no-repeat;
+                  background: url(/images/ham_white_bull.png) no-repeat;
                   background-position: 0px 5px;
                 }
 
@@ -553,7 +552,7 @@ body {
           }
 
           .gnb_li:hover {
-            background: $blue url(/public/images/border_line.png) no-repeat;
+            background: $blue url(/images/border_line.png) no-repeat;
             background-position: 50% 100%;
             color: #FFD700;
           }
@@ -646,26 +645,26 @@ body {
                     }
 
                     li:nth-child(1) {
-                      background: url(/public/images/safer_icon1.png) no-repeat;
+                      background: url(/images/safer_icon1.png) no-repeat;
 
                       a:hover {
-                        background: url(/public/images/safer_icon1_hover.png) no-repeat;
+                        background: url(/images/safer_icon1_hover.png) no-repeat;
                       }
                     }
 
                     li:nth-child(2) {
-                      background: url(/public/images/safer_icon2.png) no-repeat;
+                      background: url(/images/safer_icon2.png) no-repeat;
 
                       a:hover {
-                        background: url(/public/images/safer_icon2_hover.png) no-repeat;
+                        background: url(/images/safer_icon2_hover.png) no-repeat;
                       }
                     }
 
                     li:nth-child(3) {
-                      background: url(/public/images/safer_icon3.png) no-repeat;
+                      background: url(/images/safer_icon3.png) no-repeat;
 
                       a:hover {
-                        background: url(/public/images/safer_icon3_hover.png) no-repeat;
+                        background: url(/images/safer_icon3_hover.png) no-repeat;
                       }
                     }
                   }
@@ -673,50 +672,50 @@ body {
               }
 
               .red {
-                background: url(/public/images/safer_red.png) no-repeat;
+                background: url(/images/safer_red.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
 
               .blue_1 {
-                background: url(/public/images/safer_blue.png) no-repeat;
+                background: url(/images/safer_blue.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
 
               .blue_2 {
-                background: url(/public/images/safer_blue.png) no-repeat;
+                background: url(/images/safer_blue.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
 
               .orange {
-                background: url(/public/images/safer_orange.png) no-repeat;
+                background: url(/images/safer_orange.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
 
               .yellow_1 {
-                background: url(/public/images/safer_yellow1.png) no-repeat;
+                background: url(/images/safer_yellow1.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
 
               .yellow_2 {
-                background: url(/public/images/safer_yellow2.png) no-repeat;
+                background: url(/images/safer_yellow2.png) no-repeat;
                 background-size: contain;
                 @extend.safer_bg;
               }
             }
 
             .swiper-button-next {
-              background: url(/public/images/visual_right.png) no-repeat;
+              background: url(/images/visual_right.png) no-repeat;
               right: 30%;
               @extend.swiper_arrow;
             }
 
             .swiper-button-prev {
-              background: url(/public/images/visual_left.png) no-repeat;
+              background: url(/images/visual_left.png) no-repeat;
               left: 30%;
               @extend.swiper_arrow;
             }
@@ -782,7 +781,7 @@ body {
       }
 
       .visual_news {
-        background: url(/public/images/newsbackground.png) no-repeat left -60px;
+        background: url(/images/newsbackground.png) no-repeat left -60px;
         height: 700px;
 
         .news_inner {
@@ -864,7 +863,7 @@ body {
               }
 
               .half_top {
-                background: url(/public/images/banner_02.png) no-repeat 50% 0%;
+                background: url(/images/banner_02.png) no-repeat 50% 0%;
                 background-size: 440px 220px;
                 font-size: 18px;
                 @extend.fl_col;
@@ -883,7 +882,7 @@ body {
               }
 
               .half_bottom {
-                background: url(/public/images/banner_03.png) no-repeat 50% 5%;
+                background: url(/images/banner_03.png) no-repeat 50% 5%;
                 background-size: 440px 300px;
                 @extend.fl_col;
 
@@ -936,12 +935,12 @@ body {
                     }
 
                     .circle_1 {
-                      background: $white url(/public/images/reservation.png) no-repeat 50%;
+                      background: $white url(/images/reservation.png) no-repeat 50%;
                       background-size: 20px;
                     }
 
                     .circle_2 {
-                      background: $white url(/public/images/check_list.png) no-repeat 50%;
+                      background: $white url(/images/check_list.png) no-repeat 50%;
                       background-size: 25px;
                     }
                   }
@@ -1108,7 +1107,7 @@ body {
               border: .5px solid $gray;
               padding-left: 20px;
               appearance: none;
-              background: url(/public/images/ft-arrow.png)no-repeat;
+              background: url(/images/ft-arrow.png)no-repeat;
               background-position: 92% 50%;
             }
           }
